@@ -4,6 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.toehisa.userservice.data.entities.User;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
 import static org.toehisa.userservice.data.singltones.HibernateSessionFactoryHolder.getSessionFactory;
@@ -19,18 +21,17 @@ public class UserDataAccessObject implements DataAccessObject<User>{
             transaction.commit();
         } catch (Exception e) {
             transactionIsBadRollback(transaction);
-            e.printStackTrace();// Логируем ошибку или пробрасываем дальше
+            throw new RuntimeException("Не удалось сохранить пользователя: " + e.getMessage(), e);
         }
     }
 
     @Override
     public User findById(Object id) {
-        try(Session session = getSessionFactory().openSession()) {
-            return session.get(User.class, id);//Передаем класс, который ищем, и сам ID
+        try (Session session = getSessionFactory().openSession()) {
+            return session.get(User.class, id);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException("Ошибка при поиске пользователя: " + e.getMessage(), e);
         }
-        return null;
     }
 
     @Override
@@ -43,7 +44,7 @@ public class UserDataAccessObject implements DataAccessObject<User>{
             transaction.commit();//После коммита в бд
         } catch (Exception e) {
             transactionIsBadRollback(transaction);
-            e.printStackTrace();
+            throw new RuntimeException("Не удалось обновить пользователя: " + e.getMessage(), e);
         }
     }
 
@@ -56,7 +57,16 @@ public class UserDataAccessObject implements DataAccessObject<User>{
             transaction.commit();// Удаляем из бд
         } catch (Exception e) {
             transactionIsBadRollback(transaction);
-            e.printStackTrace();
+            throw new RuntimeException("Не удалось удалить пользователя: " + e.getMessage(), e);
+        }
+    }
+
+    public List<User> findAll() {
+        try(Session session = getSessionFactory().openSession()) {
+            return session.createNativeQuery("SELECT * FROM users", User.class).list();
+        } catch (Exception e) {
+            System.err.println("Ошибка при получении списка пользователей: " + e.getMessage());
+            return Collections.emptyList();
         }
     }
 
