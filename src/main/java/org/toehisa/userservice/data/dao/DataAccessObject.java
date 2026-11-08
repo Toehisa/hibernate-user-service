@@ -1,4 +1,4 @@
-package org.toehisa.userservice.dao;
+package org.toehisa.userservice.data.dao;
 
 //Нужен для изоляции работы с бд
 public interface DataAccessObject<T> {
