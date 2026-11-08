@@ -1,12 +1,12 @@
-package org.toehisa.userservice.dao;
+package org.toehisa.userservice.data.dao;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.toehisa.userservice.entities.User;
+import org.toehisa.userservice.data.entities.User;
 
 import java.util.Objects;
 
-import static org.toehisa.userservice.singltones.HibernateSessionFactoryHolder.getSessionFactory;
+import static org.toehisa.userservice.data.singltones.HibernateSessionFactoryHolder.getSessionFactory;
 
 public class UserDataAccessObject implements DataAccessObject<User>{
     @Override

@@ -1,8 +1,8 @@
-package org.toehisa.userservice.singltones;
+package org.toehisa.userservice.data.singltones;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.toehisa.userservice.entities.User;
+import org.toehisa.userservice.data.entities.User;
 
 //Нужен чтобы фабрика сессий существовала в 1 экземпляре, для того чтобы не забивать пул соединений другими экземплярами
 public class HibernateSessionFactoryHolder {

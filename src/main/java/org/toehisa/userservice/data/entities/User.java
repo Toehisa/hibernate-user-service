@@ -1,4 +1,4 @@
-package org.toehisa.userservice.entities;
+package org.toehisa.userservice.data.entities;
 
 import jakarta.persistence.*;
 
