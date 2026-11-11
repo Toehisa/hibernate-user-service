@@ -1,5 +1,6 @@
 package org.toehisa.userservice.data.dao;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.toehisa.userservice.data.entities.User;
@@ -16,12 +17,16 @@ public class UserDataAccessObject implements DataAccessObject<User>{
         Transaction transaction = null;
 
         try(Session session = getSessionFactory().openSession()) {//Достаем сессию из пула сессий
-            transaction = session.beginTransaction();//Начинаем транзакцию в сессии
-            session.persist(user);//IDENTITY сначала в бд потом в кеше, SEQUENCE, UUID сначала в кеше потом в бд
-            transaction.commit();
+            try {
+                transaction = session.beginTransaction();//Начинаем транзакцию в сессии
+                session.persist(user);//IDENTITY сначала в бд потом в кеше, SEQUENCE, UUID сначала в кеше потом в бд
+                transaction.commit();
+            } catch (HibernateException e) {
+                transactionIsBadRollback(transaction);
+                throw new RuntimeException("Не удалось сохранить пользователя в БД", e);
+            }
         } catch (Exception e) {
-            transactionIsBadRollback(transaction);
-            throw new RuntimeException("Не удалось сохранить пользователя: " + e.getMessage(), e);
+            throw new RuntimeException("Критический сбой в методе save: " + e.getMessage(), e);
         }
     }
 
@@ -39,12 +44,16 @@ public class UserDataAccessObject implements DataAccessObject<User>{
         Transaction transaction = null;
 
         try(Session session = getSessionFactory().openSession()) {//Достаем сессию из пула сессий
-            transaction = session.beginTransaction();//Начинаем транзакцию в сессии
-            session.merge(user);//Обновляем запись в кеше
-            transaction.commit();//После коммита в бд
+            try {
+                transaction = session.beginTransaction();//Начинаем транзакцию в сессии
+                session.merge(user);//Обновляем запись в кеше
+                transaction.commit();//После коммита в бд
+            } catch (HibernateException e) {
+                transactionIsBadRollback(transaction);
+                throw new RuntimeException("Не удалось обновить пользователя в БД", e);
+            }
         } catch (Exception e) {
-            transactionIsBadRollback(transaction);
-            throw new RuntimeException("Не удалось обновить пользователя: " + e.getMessage(), e);
+            throw new RuntimeException("Критический сбой в методе update: " + e.getMessage(), e);
         }
     }
 
@@ -52,12 +61,16 @@ public class UserDataAccessObject implements DataAccessObject<User>{
     public void delete(User user) {
         Transaction transaction = null;
         try(Session session = getSessionFactory().openSession()) {
-            transaction = session.beginTransaction(); // Удаление тоже требует транзакции
-            session.remove(user); // Удаляем объект из кеша
-            transaction.commit();// Удаляем из бд
+            try {
+                transaction = session.beginTransaction(); // Удаление тоже требует транзакции
+                session.remove(user); // Удаляем объект из кеша
+                transaction.commit();// Удаляем из бд
+            } catch (HibernateException e) {
+                transactionIsBadRollback(transaction);
+                throw new RuntimeException("Не удалось удалить пользователя в БД", e);
+            }
         } catch (Exception e) {
-            transactionIsBadRollback(transaction);
-            throw new RuntimeException("Не удалось удалить пользователя: " + e.getMessage(), e);
+            throw new RuntimeException("Критический сбой в методе delete: " + e.getMessage(), e);
         }
     }
 
@@ -71,7 +84,7 @@ public class UserDataAccessObject implements DataAccessObject<User>{
     }
 
     private void transactionIsBadRollback(Transaction transaction) {
-        if (Objects.nonNull(transaction)) {
+        if (Objects.nonNull(transaction) && transaction.isActive()) {
             transaction.rollback();
         }
     }
