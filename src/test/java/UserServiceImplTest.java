@@ -28,6 +28,8 @@ class UserServiceImplTest {
 
     @BeforeEach
     void setUp() {
+        userService = new UserServiceImpl(userDao);
+
         validUser = new User();
         validUser.setId(UUID.randomUUID());
         validUser.setName("Иван");
