@@ -22,7 +22,6 @@ public abstract class Payment extends BaseEntity {
     private BigDecimal amount;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
     private User user;
 
     public BigDecimal getAmount() {
