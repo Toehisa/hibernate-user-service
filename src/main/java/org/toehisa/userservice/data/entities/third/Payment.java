@@ -9,15 +9,14 @@ import java.math.BigDecimal;
 //Способ наследования №3 - Нормализация бд через join
 
 /**
- * Минусы
- * - Пустые ячейки
- *
+ * Плюс - Идеальная структура БД. Нет пустых колонок, можно вешать NOT NULL ограничения на дочерние поля.
+ * Минус - Деградация производительности. Если иерархия глубокая (4-5 уровней),
+ *         Hibernate будет делать монструозные многоэтажные JOIN при каждом чтении.
  */
 
 @Entity(name = "Payment3")
 @Table(name = "payments")
 @Inheritance(strategy = InheritanceType.JOINED)
-// @DiscriminatorColumn в JOINED не обязателен
 public abstract class Payment extends BaseEntity {
     private BigDecimal amount;
 

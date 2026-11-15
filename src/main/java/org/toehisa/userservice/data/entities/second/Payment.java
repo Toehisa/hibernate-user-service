@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 //Способ наследования №2 - Одна таблица на иерархию
 
 /**
- * Минусы
- * - Пустые ячейки
- *
+ * Плюс - Максимальная скорость. Всегда нужен только 1 SELECT без всяких джоинов.
+ * Минус - Нарушение нормализации БД. Колонки дочерних классов (cardNumber, walletAddress)
+ *         обязаны быть NULLable (допускать null) на уровне базы данных.
  */
 
 @Entity(name = "Payment2")
@@ -25,19 +25,19 @@ public abstract class Payment extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public void setAmount(BigDecimal bigDecimal) {
-
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     public BigDecimal getAmount() {
         return amount;
     }
 
     public User getUser() {
         return user;
+    }
+
+    public void setAmount(BigDecimal bigDecimal) {
+
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

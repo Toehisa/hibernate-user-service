@@ -7,10 +7,8 @@ import jakarta.persistence.Entity;
 import java.util.UUID;
 
 @Entity
-@DiscriminatorValue("CARD") // То, что запишется в колонку payment_type
+@DiscriminatorValue("CARD")//Маркер делитель данных для дочерних классов чтобы не привязываться к имени класса и явно указать что инициализировать
 public class CardPayment extends Payment {
-
-    public CardPayment(){}
 
     @Column(name = "card_number")
     private String cardNumber;
@@ -18,6 +16,10 @@ public class CardPayment extends Payment {
     @Override
     public UUID getId() {
         return super.getId();
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
     }
 
     public void setCardNumber(String cardNumber) {

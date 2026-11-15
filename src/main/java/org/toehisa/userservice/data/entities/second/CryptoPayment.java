@@ -5,7 +5,7 @@ import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("CRYPTO")// То, что запишется в колонку payment_type
+@DiscriminatorValue("CRYPTO")//Маркер делитель данных для дочерних классов чтобы не привязываться к имени класса и явно указать что инициализировать
 public class CryptoPayment extends Payment {
 
     @Column(name = "wallet_address")

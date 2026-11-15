@@ -9,9 +9,9 @@ import java.math.BigDecimal;
 //Способ наследования №4 - Каждому по таблице
 
 /**
- * Минусы
- * - Пустые ячейки
- *
+ * Плюс - Идеально быстро достает конкретный подкласс (один простой SELECT).
+ * Минус - Катастрофа при полиморфных запросах.
+ *         На больших объемах данных UNION убивает производительность базы.
  */
 
 @Entity(name = "Payment4")
@@ -24,19 +24,19 @@ public abstract class Payment extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
-    public void setAmount(BigDecimal bigDecimal) {
-
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     public BigDecimal getAmount() {
         return amount;
     }
 
     public User getUser() {
         return user;
+    }
+
+    public void setAmount(BigDecimal bigDecimal) {
+
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
