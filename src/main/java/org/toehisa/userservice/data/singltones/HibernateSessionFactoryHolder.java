@@ -6,7 +6,7 @@ import org.toehisa.userservice.data.entities.User;
 
 //Нужен чтобы фабрика сессий существовала в 1 экземпляре, для того чтобы не забивать пул соединений другими экземплярами
 public class HibernateSessionFactoryHolder {
-    private static final SessionFactory sessionFactory;//Инициализируется 1 раз в объекте рефлексии без возможности подмены ссылки
+    private static SessionFactory sessionFactory;//Инициализируется 1 раз в объекте рефлексии без возможности подмены ссылки
 
     static {
         try {

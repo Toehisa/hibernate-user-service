@@ -33,7 +33,7 @@ public class UserDataAccessObject implements DataAccessObject<User>{
     @Override
     public User findById(Object id) {
         try (Session session = getSessionFactory().openSession()) {
-            return session.get(User.class, id);
+            return session.find(User.class, id);
         } catch (Exception e) {
             throw new RuntimeException("Ошибка при поиске пользователя: " + e.getMessage(), e);
         }
