@@ -12,11 +12,11 @@ public class CardPayment extends Payment {
     @Column(name = "card_number")
     private String cardNumber;
 
-    public void setCardNumber(String cardNumber) {
-        this.cardNumber = cardNumber;
-    }
-
     public String getCardNumber() {
         return cardNumber;
+    }
+
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
     }
 }

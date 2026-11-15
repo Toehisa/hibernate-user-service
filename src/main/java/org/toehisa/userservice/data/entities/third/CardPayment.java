@@ -12,9 +12,8 @@ public class CardPayment extends Payment {
     @Column(name = "card_number")
     private String cardNumber;
 
-    @Override
-    public UUID getId() {
-        return super.getId();
+    public String getCardNumber() {
+        return cardNumber;
     }
 
     public void setCardNumber(String cardNumber) {
