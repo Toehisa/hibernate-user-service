@@ -6,7 +6,16 @@ import org.toehisa.userservice.data.entities.first.BaseEntity;
 
 import java.math.BigDecimal;
 
-@Entity
+//Способ наследования №4 - Каждому по таблице
+
+/**
+ * Минусы
+ * - Пустые ячейки
+ *
+ */
+
+@Entity(name = "Payment4")
+@Table(name = "payments")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Payment extends BaseEntity {
     private BigDecimal amount;
@@ -23,5 +32,11 @@ public abstract class Payment extends BaseEntity {
         this.user = user;
     }
 
-    // Геттеры и сеттеры (amount, user)
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }

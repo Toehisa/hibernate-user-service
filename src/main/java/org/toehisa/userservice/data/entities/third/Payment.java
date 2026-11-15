@@ -14,10 +14,10 @@ import java.math.BigDecimal;
  *
  */
 
-@Entity
+@Entity(name = "Payment3")
 @Table(name = "payments")
-@Inheritance(strategy = InheritanceType.JOINED) // Изменили только эту строку!
-// @DiscriminatorColumn можно удалить, в JOINED он не обязателен
+@Inheritance(strategy = InheritanceType.JOINED)
+// @DiscriminatorColumn в JOINED не обязателен
 public abstract class Payment extends BaseEntity {
     private BigDecimal amount;
 
@@ -25,5 +25,19 @@ public abstract class Payment extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
-    // Геттеры и сеттеры (amount, user)
+    public void setAmount(BigDecimal bigDecimal) {
+
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }

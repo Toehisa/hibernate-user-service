@@ -7,97 +7,141 @@ import org.junit.jupiter.api.*;
 import java.math.BigDecimal;
 import java.util.List;
 
-// Импортируй нужный пакет для тестирования конкретной стратегии
+// Импорт общих сущностей
 import org.toehisa.userservice.data.entities.User;
-//import org.toehisa.userservice.data.entities.second.*;
-//import org.toehisa.userservice.data.entities.third.*;
-import org.toehisa.userservice.data.entities.fourth.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class InheritanceMappingTest {
 
-    private SessionFactory sessionFactory;
-    private Session session;
-    private Transaction transaction;
+    @Test
+    @DisplayName("2. SINGLE_TABLE (Одна таблица на всех)")
+    void testSingleTableStrategy() {
+        Class<?>[] classes = {
+                User.class,
+                org.toehisa.userservice.data.entities.second.Payment.class,
+                org.toehisa.userservice.data.entities.second.CardPayment.class,
+                org.toehisa.userservice.data.entities.second.CryptoPayment.class
+        };
 
-    @BeforeAll
-    void initHibernate() {
-        Configuration configuration = new Configuration();
+        runInheritanceTest("SINGLE_TABLE (Одна таблица)", classes, session -> {
+            User user = createUser(session);
 
-        configuration
-                .addAnnotatedClass(org.toehisa.userservice.data.entities.User.class)
+            org.toehisa.userservice.data.entities.second.CardPayment card = new org.toehisa.userservice.data.entities.second.CardPayment();
+            card.setAmount(new BigDecimal("1000.00"));
+            card.setCardNumber("1111-2222-3333-4444");
+            card.setUser(user);
+            session.persist(card);
 
-                .addAnnotatedClass(org.toehisa.userservice.data.entities.fourth.Payment.class)
-                .addAnnotatedClass(org.toehisa.userservice.data.entities.fourth.CardPayment.class)
-                .addAnnotatedClass(org.toehisa.userservice.data.entities.fourth.CryptoPayment.class);
-
-        sessionFactory = configuration.buildSessionFactory();
-    }
-
-    @AfterAll
-    void closeHibernate() {
-        if (sessionFactory != null) {
-            sessionFactory.close();
-        }
-    }
-
-    @BeforeEach
-    void openSession() {
-        session = sessionFactory.openSession();
-        transaction = session.beginTransaction();
-    }
-
-    @AfterEach
-    void closeSession() {
-        // Если транзакция еще активна (не была закоммичена в тесте), откатываем её
-        if (transaction != null && transaction.isActive()) {
-            transaction.rollback();
-        }
-        if (session != null) {
-            session.close();
-        }
+            org.toehisa.userservice.data.entities.second.CryptoPayment crypto = new org.toehisa.userservice.data.entities.second.CryptoPayment();
+            crypto.setAmount(new BigDecimal("0.5"));
+            crypto.setWalletAddress("bc1qxy2kgdy...");
+            crypto.setUser(user);
+            session.persist(crypto);
+        });
     }
 
     @Test
-    @DisplayName("Проверка генерации схемы БД для стратегии наследования")
-    void shouldGenerateAndPrintCorrectDatabaseSchema() {
+    @DisplayName("3. JOINED (Одна таблица через join)")
+    void testJoinedStrategy() {
+        Class<?>[] classes = {
+                User.class,
+                org.toehisa.userservice.data.entities.third.Payment.class,
+                org.toehisa.userservice.data.entities.third.CardPayment.class,
+                org.toehisa.userservice.data.entities.third.CryptoPayment.class
+        };
 
-        User user = new User();
-        user.setName("Джон");
-        user.setLastName("Доу");
-        user.setAge(25);
-        session.persist(user);
+        runInheritanceTest("JOINED (Таблицы через JOIN)", classes, session -> {
+            User user = createUser(session);
 
-        CardPayment card = new CardPayment();
-        card.setAmount(new BigDecimal("1000.00"));
-        card.setCardNumber("1111-2222-3333-4444");
-        card.setUser(user);
-        session.persist(card);
+            org.toehisa.userservice.data.entities.third.CardPayment card = new org.toehisa.userservice.data.entities.third.CardPayment();
+            card.setAmount(new BigDecimal("1000.00"));
+            card.setCardNumber("1111-2222-3333-4444");
+            card.setUser(user);
+            session.persist(card);
 
-        CryptoPayment crypto = new CryptoPayment();
-        crypto.setAmount(new BigDecimal("0.5"));
-        crypto.setWalletAddress("bc1qxy2kgdy...");
-        crypto.setUser(user);
-        session.persist(crypto);
-
-        transaction.commit();
-        printDatabaseSchema();
+            org.toehisa.userservice.data.entities.third.CryptoPayment crypto = new org.toehisa.userservice.data.entities.third.CryptoPayment();
+            crypto.setAmount(new BigDecimal("0.5"));
+            crypto.setWalletAddress("bc1qxy2kgdy...");
+            crypto.setUser(user);
+            session.persist(crypto);
+        });
     }
 
-    private void printDatabaseSchema() {
-        System.out.println("\n=======================================================");
-        System.out.println(" СТРУКТУРА ТАБЛИЦ В POSTGRESQL ДЛЯ ТЕКУЩЕЙ СТРАТЕГИИ");
-        System.out.println("=======================================================");
+    @Test
+    @DisplayName("4. TABLE_PER_CLASS (Каждому по таблице)")
+    void testTablePerClassStrategy() {
+        Class<?>[] classes = {
+                User.class,
+                org.toehisa.userservice.data.entities.fourth.Payment.class,
+                org.toehisa.userservice.data.entities.fourth.CardPayment.class,
+                org.toehisa.userservice.data.entities.fourth.CryptoPayment.class
+        };
 
+        runInheritanceTest("TABLE_PER_CLASS (Каждому классу по таблице)", classes, session -> {
+            User user = createUser(session);
+
+            org.toehisa.userservice.data.entities.fourth.CardPayment card = new org.toehisa.userservice.data.entities.fourth.CardPayment();
+            card.setAmount(new BigDecimal("1000.00"));
+            card.setCardNumber("1111-2222-3333-4444");
+            card.setUser(user);
+            session.persist(card);
+
+            org.toehisa.userservice.data.entities.fourth.CryptoPayment crypto = new org.toehisa.userservice.data.entities.fourth.CryptoPayment();
+            crypto.setAmount(new BigDecimal("0.5"));
+            crypto.setWalletAddress("bc1qxy2kgdy...");
+            crypto.setUser(user);
+            session.persist(crypto);
+        });
+    }
+
+    // --- Инфраструктурные методы ---
+
+    private void runInheritanceTest(String strategyName, Class<?>[] annotatedClasses, HibernateAction action) {
+        Configuration configuration = new Configuration();
+
+        configuration.setProperty("hibernate.show_sql", "false");
+
+        configuration.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+
+        for (Class<?> clazz : annotatedClasses) {
+            configuration.addAnnotatedClass(clazz);
+        }
+
+        try (SessionFactory sessionFactory = configuration.buildSessionFactory(); Session session = sessionFactory.openSession()) {
+
+            Transaction transaction = session.beginTransaction();
+
+            action.execute(session);
+
+            transaction.commit();
+
+            printDatabaseSchema(session, strategyName);
+        }
+    }
+
+    private User createUser(Session session) {
+        User user = new User();
+        user.setName("Валера");
+        user.setLastName("Жмышенко");
+        user.setAge(25);
+        session.persist(user);
+        return user;
+    }
+
+    private void printDatabaseSchema(Session session, String inheritanceType) {
         String sql = "SELECT table_name, column_name, data_type " +
                 "FROM information_schema.columns " +
                 "WHERE table_schema = 'public' " +
-                "AND table_name IN ('users', 'payments', 'payment', 'cardpayment', 'cryptopayment') " +
+                "AND table_name LIKE '%payment%' " +
                 "ORDER BY table_name, ordinal_position";
 
         List<Object[]> columns = session.createNativeQuery(sql, Object[].class).list();
 
-        Assertions.assertFalse(columns.isEmpty(), "Таблицы не найдены! Проверь настройки маппинга и hbm2ddl.auto");
+        System.out.println("\n=======================================================");
+        System.out.println(" СТРУКТУРА ТАБЛИЦ В POSTGRESQL ДЛЯ: " + inheritanceType);
+        System.out.println("=======================================================");
+
+        Assertions.assertFalse(columns.isEmpty(), "Таблицы не найдены! Проверь маппинг.");
 
         String currentTable = "";
         for (Object[] row : columns) {
@@ -115,5 +159,10 @@ public class InheritanceMappingTest {
             System.out.printf("| %-25s | %-20s |\n", columnName, dataType);
         }
         System.out.println("-------------------------------------------------------\n");
+    }
+
+    @FunctionalInterface
+    private interface HibernateAction {
+        void execute(Session session);
     }
 }

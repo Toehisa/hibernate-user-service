@@ -696,3 +696,973 @@ Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
 	Maximum pool size: 20
 2026-11-11 20:28:42 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 2026-11-11 20:28:42 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-14 06:47:53 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-14 06:47:53 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-14 06:47:53 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-14 06:47:53 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-14 06:47:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-14 06:47:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-14 06:47:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-14 06:47:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-14 06:47:53 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-14 06:47:53 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-14 06:47:54 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-14 06:47:54 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:44:29 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:44:29 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:44:29 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:44:29 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:44:29 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:44:29 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:44:29 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:44:29 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:44:29 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:44:29 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:44:29 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:44:29 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:45:16 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:45:16 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:45:16 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:45:16 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:45:16 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:45:16 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:45:16 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:45:16 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:45:16 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:45:16 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:45:17 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:45:17 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:47:44 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:47:44 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:47:44 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:47:44 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:47:44 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:47:44 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:47:44 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:47:44 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:47:44 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:47:44 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:47:45 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:47:45 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:52:42 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:52:42 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:52:42 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:52:42 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:52:42 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:52:42 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:52:42 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:52:42 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:52:42 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:52:42 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:52:43 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:52:43 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:55:44 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:55:44 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:55:44 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:55:44 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:55:44 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:55:44 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:55:44 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:55:44 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:55:44 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:55:44 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:55:45 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:55:45 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:59:29 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:59:29 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 07:59:29 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:59:29 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 07:59:30 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:59:30 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 07:59:30 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:59:30 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 07:59:30 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:59:30 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 07:59:30 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 07:59:30 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:04:07 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:04:07 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:04:07 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:04:07 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:04:07 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:04:07 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:04:07 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:04:07 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:04:07 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:04:07 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:04:07 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:04:07 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:04:18 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:04:18 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:04:18 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:04:18 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:04:18 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:04:18 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:04:18 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:04:18 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:04:18 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:04:18 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:04:19 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:04:19 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:05:02 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:05:02 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:05:02 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:05:02 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:05:02 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:05:02 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:05:02 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:05:02 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:05:03 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:05:03 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:05:03 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:05:03 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:05:29 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:05:29 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:05:29 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:05:29 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:05:29 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:05:29 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:05:29 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:05:29 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:05:29 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:05:29 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:05:29 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:05:29 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:05:55 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:05:55 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:05:55 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:05:55 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:05:55 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:05:55 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:05:55 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:05:55 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:05:55 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:05:55 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:05:55 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:05:55 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:08:46 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:08:46 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:08:46 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:08:46 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:08:47 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:08:47 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:08:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:08:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:08:47 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:08:47 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:08:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:08:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:08:47 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:08:47 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:08:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:08:47 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:08:47 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:12:03 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:12:03 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:12:03 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:12:03 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:12:03 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:12:03 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:12:03 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:12:03 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:12:03 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:12:03 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:12:04 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:12:04 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:12:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:12:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:12:04 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:12:04 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:12:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:12:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:12:04 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:14:27 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:14:27 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:14:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:14:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:14:27 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:14:27 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:14:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:14:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:14:27 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:14:27 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:14:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:14:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:14:27 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:23:24 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:23:24 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:23:24 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:23:24 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:23:24 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:23:24 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:23:24 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:23:24 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:23:24 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:23:24 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:23:25 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:23:25 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:23:25 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:23:25 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:23:25 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:23:25 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:23:25 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:23:25 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:23:25 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:27:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:27:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:27:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:27:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:27:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:27:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:27:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:27:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:27:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:27:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:27:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:27:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:27:53 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:32:48 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:32:48 [main] INFO  org.hibernate.orm.info - HHH000001: Hibernate ORM core version 8.0.0.Beta4
+2026-11-15 08:32:48 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:32:48 [main] INFO  org.hibernate.orm.core - HHH000205: Loaded properties from resource hibernate.properties: {hibernate.format_sql=true, hibernate.hbm2ddl.auto=create, jakarta.persistence.jdbc.driver=org.postgresql.Driver, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, hibernate.highlight_sql=true, jakarta.persistence.jdbc.url=jdbc:postgresql://localhost:5432/user_service_db, jakarta.persistence.jdbc.user=hibernate_user, hibernate.show_sql=true, jakarta.persistence.jdbc.password=****}
+2026-11-15 08:32:48 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:32:48 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:32:48 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:32:48 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:32:48 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:32:48 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:32:48 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:32:48 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:32:49 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:32:49 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:32:49 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:32:49 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:32:49 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:32:49 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:32:49 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:32:49 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:32:49 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:32:49 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-11-15 08:32:49 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:32:49 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-11-15 08:32:49 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:32:49 [main] INFO  org.hibernate.orm.info - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/user_service_db]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.6
+	Default catalog/schema: user_service_db/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-11-15 08:32:49 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-15 08:32:49 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
