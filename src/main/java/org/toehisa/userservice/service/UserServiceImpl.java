@@ -9,7 +9,15 @@ import java.util.Objects;
 import java.util.UUID;
 
 public class UserServiceImpl implements UserService {
-    private final DataAccessObject<User> userDao = new UserDataAccessObject();
+    private final DataAccessObject<User> userDao;
+
+    public UserServiceImpl() {
+        this.userDao = new UserDataAccessObject();
+    }
+
+    public UserServiceImpl(DataAccessObject<User> userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public void createUser(User user) {
