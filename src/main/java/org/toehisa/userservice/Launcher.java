@@ -1,25 +1,32 @@
 package org.toehisa.userservice;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.toehisa.userservice.presentation.input.ConsoleInputReader;
 import org.toehisa.userservice.presentation.menu.providers.MainMenuProvider;
 import org.toehisa.userservice.presentation.menu.providers.MenuProvider;
 import org.toehisa.userservice.presentation.menu.selectors.MainMenuSelector;
 import org.toehisa.userservice.presentation.menu.selectors.MenuSelector;
 import org.toehisa.userservice.presentation.output.ConsoleOutputWriter;
+import org.toehisa.userservice.service.UserService;
 
 import java.util.Scanner;
+
 public class Launcher {
     public static void main(String[] args) {
+        ConfigurableApplicationContext context = SpringApplication.run(UserServiceApplication.class, args);
+        UserService userService = context.getBean(UserService.class);
+
         try (Scanner scanner = new Scanner(System.in)) {
-            MenuProvider menuProvider = buildMenuProvider(scanner);
+            MenuProvider menuProvider = buildMenuProvider(scanner, userService);
             MenuSelector menuSelector = new MainMenuSelector(menuProvider);
             menuSelector.run();
         }
     }
 
-    private static MenuProvider buildMenuProvider(Scanner scanner) {
+    private static MenuProvider buildMenuProvider(Scanner scanner, UserService userService) {
         ConsoleInputReader inputReader = new ConsoleInputReader(scanner);
         ConsoleOutputWriter outputWriter = new ConsoleOutputWriter();
-        return new MainMenuProvider(inputReader, outputWriter);
+        return new MainMenuProvider(inputReader, outputWriter, userService);
     }
 }

@@ -1,3 +1,5 @@
+package org.toehisa.userservice;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -93,8 +95,6 @@ public class InheritanceMappingTest {
             session.persist(crypto);
         });
     }
-
-    // --- Инфраструктурные методы ---
 
     private void runInheritanceTest(String strategyName, Class<?>[] annotatedClasses, HibernateAction action) {
         Configuration configuration = new Configuration();

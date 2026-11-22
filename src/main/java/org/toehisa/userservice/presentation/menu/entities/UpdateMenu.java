@@ -1,5 +1,8 @@
 package org.toehisa.userservice.presentation.menu.entities;
 
+import org.springframework.web.server.ResponseStatusException;
+import org.toehisa.userservice.data.dto.UserRequestDto;
+import org.toehisa.userservice.data.dto.UserResponseDto;
 import org.toehisa.userservice.data.entities.User;
 import org.toehisa.userservice.presentation.input.ConsoleInputReader;
 import org.toehisa.userservice.presentation.menu.routes.MenuRoutes;
@@ -14,12 +17,13 @@ import static org.toehisa.userservice.presentation.menu.routes.MenuRoutes.MAIN;
 public class UpdateMenu extends Menu {
     private final ConsoleInputReader inputReader;
     private final ConsoleOutputWriter outputWriter;
-    private final UserService userService = new UserServiceImpl();
+    private final UserService userService;
 
-    public UpdateMenu(MenuRoutes routeID, ConsoleInputReader inputReader, ConsoleOutputWriter outputWriter) {
+    public UpdateMenu(MenuRoutes routeID, ConsoleInputReader inputReader, ConsoleOutputWriter outputWriter, UserService userService) {
         super(routeID);
         this.inputReader = inputReader;
         this.outputWriter = outputWriter;
+        this.userService = userService;
     }
 
     @Override
@@ -30,28 +34,20 @@ public class UpdateMenu extends Menu {
     @Override
     public MenuRoutes execute() {
         UUID id = inputReader.readUUID("Введите ID пользователя для изменения: ");
-        User user = userService.getUserById(id);
-
-        if (user == null) {
-            outputWriter.print("Пользователь с таким ID не найден.");
-            return MAIN;
-        }
-
-        outputWriter.print("Текущие данные: " + user);
-
-        String newName = inputReader.readLetters("Введите новое имя: ");
-        String newLastName = inputReader.readLetters("Введите новую фамилию: ");
-        Integer newAge = inputReader.readIntInRange("Введите новый возраст: ", 12, 100);
-
-        user.setName(newName);
-        user.setLastName(newLastName);
-        user.setAge(newAge);
 
         try {
-            userService.updateUser(user);
+            UserResponseDto user = userService.getUserById(id);
+            outputWriter.print("Текущие данные: " + user);
+
+            String newName = inputReader.readLetters("Введите новое имя: ");
+            String newLastName = inputReader.readLetters("Введите новую фамилию: ");
+            Integer newAge = inputReader.readIntInRange("Введите новый возраст: ", 18, 100);
+
+            UserRequestDto updatedDto = new UserRequestDto(newName, newLastName, user.email(), newAge);
+            userService.updateUser(id, updatedDto);
             outputWriter.print("Данные успешно обновлены!");
-        } catch (IllegalArgumentException e) {
-            outputWriter.printError("Ошибка обновления: " + e.getMessage());
+        } catch (ResponseStatusException e) {
+            outputWriter.printError("Ошибка обновления: " + e.getReason());
         }
 
         return MAIN;

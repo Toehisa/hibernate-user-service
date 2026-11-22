@@ -1,23 +1,24 @@
 package org.toehisa.userservice.presentation.menu.entities;
 
-import org.toehisa.userservice.data.entities.User;
+import org.springframework.web.server.ResponseStatusException;
+import org.toehisa.userservice.data.dto.UserRequestDto;
 import org.toehisa.userservice.presentation.input.ConsoleInputReader;
 import org.toehisa.userservice.presentation.menu.routes.MenuRoutes;
 import org.toehisa.userservice.presentation.output.ConsoleOutputWriter;
 import org.toehisa.userservice.service.UserService;
-import org.toehisa.userservice.service.UserServiceImpl;
 
 import static org.toehisa.userservice.presentation.menu.routes.MenuRoutes.MAIN;
 
 public class CreateMenu extends Menu {
     private final ConsoleInputReader inputReader;
     private final ConsoleOutputWriter outputWriter;
-    private final UserService userService = new UserServiceImpl();
+    private final UserService userService;
 
-    public CreateMenu(MenuRoutes routeID, ConsoleInputReader inputReader, ConsoleOutputWriter outputWriter) {
+    public CreateMenu(MenuRoutes routeID, ConsoleInputReader inputReader, ConsoleOutputWriter outputWriter, UserService userService) {
         super(routeID);
         this.inputReader = inputReader;
         this.outputWriter = outputWriter;
+        this.userService = userService;
     }
 
     @Override
@@ -31,14 +32,14 @@ public class CreateMenu extends Menu {
         String lastName = inputReader.readLetters("Введите фамилию: ");
         Integer age = inputReader.readIntInRange("Введите возраст: ", 12, 100);
 
-        User user = User.builder()
-                .name(name)
-                .lastName(lastName)
-                .age(age)
-                .build();
+        UserRequestDto dto = new UserRequestDto(name, lastName, null, age);
 
-        userService.createUser(user);
-        outputWriter.print("Пользователь успешно сохранен в базу данных!");
+        try {
+            userService.createUser(dto);
+            outputWriter.print("Пользователь успешно сохранен в базу данных!");
+        } catch (ResponseStatusException e) {
+            outputWriter.printError("Ошибка создания: " + e.getReason());
+        }
 
         return MAIN;
     }
