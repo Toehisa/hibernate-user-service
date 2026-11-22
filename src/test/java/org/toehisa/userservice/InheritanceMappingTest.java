@@ -96,8 +96,6 @@ public class InheritanceMappingTest {
         });
     }
 
-    // --- Инфраструктурные методы ---
-
     private void runInheritanceTest(String strategyName, Class<?>[] annotatedClasses, HibernateAction action) {
         Configuration configuration = new Configuration();
 
