@@ -1,69 +1,91 @@
 package org.toehisa.userservice.service;
 
-import org.toehisa.userservice.data.dao.DataAccessObject;
-import org.toehisa.userservice.data.dao.UserDataAccessObject;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
 import org.toehisa.userservice.data.entities.User;
+import org.toehisa.userservice.data.dto.UserRequestDto;
+import org.toehisa.userservice.data.dto.UserResponseDto;
+import org.toehisa.userservice.data.repository.UserRepository;
 
 import java.util.List;
-import java.util.Objects;
 import java.util.UUID;
 
+@Service
 public class UserServiceImpl implements UserService {
-    private final DataAccessObject<User> userDao;
 
-    public UserServiceImpl() {
-        this.userDao = new UserDataAccessObject();
-    }
+    private final UserRepository userRepository;
 
-    public UserServiceImpl(DataAccessObject<User> userDao) {
-        this.userDao = userDao;
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
     @Override
-    public void createUser(User user) {
-        validateUser(user);
-        userDao.save(user);
+    @Transactional
+    public UserResponseDto createUser(UserRequestDto dto) {
+        validateDto(dto);
+        User user = User.builder()
+                .name(dto.name())
+                .lastName(dto.lastName())
+                .email(dto.email())
+                .age(dto.age())
+                .build();
+        return UserResponseDto.from(userRepository.save(user));
     }
 
     @Override
-    public User getUserById(UUID id) {
-        if (Objects.isNull(id)) {
-            throw new IllegalArgumentException("ID не может быть null");
-        }
-        return userDao.findById(id);
+    @Transactional(readOnly = true)
+    public UserResponseDto getUserById(UUID id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Пользователь не найден: " + id));
+        return UserResponseDto.from(user);
     }
 
     @Override
-    public List<User> getAllUsers() {
-        return userDao.findAll();
+    @Transactional(readOnly = true)
+    public List<UserResponseDto> getAllUsers() {
+        return userRepository.findAll().stream()
+                .map(UserResponseDto::from)
+                .toList();
     }
 
     @Override
-    public void updateUser(User user) {
-        validateUser(user);
-        userDao.update(user);
+    @Transactional
+    public UserResponseDto updateUser(UUID id, UserRequestDto dto) {
+        validateDto(dto);
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Пользователь не найден: " + id));
+
+        user.setName(dto.name());
+        user.setLastName(dto.lastName());
+        user.setEmail(dto.email());
+        user.setAge(dto.age());
+
+        return UserResponseDto.from(userRepository.save(user));
     }
 
     @Override
-    public void deleteUser(User user) {
-        if (user == null || user.getId() == null) {
-            throw new IllegalArgumentException("Пользователь для удаления не найден");
+    @Transactional
+    public void deleteUser(UUID id) {
+        if (!userRepository.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Пользователь не найден: " + id);
         }
-        userDao.delete(user);
+        userRepository.deleteById(id);
     }
 
-    private void validateUser(User user) {
-        if (user == null) {
-            throw new IllegalArgumentException("Пользователь не может быть null");
+    private void validateDto(UserRequestDto dto) {
+        if (dto == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Пользователь не может быть null");
         }
-        if (user.getName() == null || user.getName().trim().isEmpty()) {
-            throw new IllegalArgumentException("Имя не может быть пустым");
+        if (dto.name() == null || dto.name().trim().isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Имя не может быть пустым");
         }
-        if (user.getLastName() == null || user.getLastName().trim().isEmpty()) {
-            throw new IllegalArgumentException("Фамилия не может быть пустой");
+        if (dto.lastName() == null || dto.lastName().trim().isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Фамилия не может быть пустой");
         }
-        if (user.getAge() == null || user.getAge() < 12 || user.getAge() > 100) {
-            throw new IllegalArgumentException("Возраст должен быть от 12 до 100 лет");
+        if (dto.age() == null || dto.age() < 12 || dto.age() > 100) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Возраст должен быть от 12 до 100 лет");
         }
     }
 }

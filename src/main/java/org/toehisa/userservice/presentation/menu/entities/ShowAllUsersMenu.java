@@ -1,5 +1,6 @@
 package org.toehisa.userservice.presentation.menu.entities;
 
+import org.toehisa.userservice.data.dto.UserResponseDto;
 import org.toehisa.userservice.data.entities.User;
 import org.toehisa.userservice.presentation.menu.routes.MenuRoutes;
 import org.toehisa.userservice.presentation.output.ConsoleOutputWriter;
@@ -12,11 +13,12 @@ import static org.toehisa.userservice.presentation.menu.routes.MenuRoutes.MAIN;
 
 public class ShowAllUsersMenu extends Menu {
     private final ConsoleOutputWriter outputWriter;
-    private final UserService userService = new UserServiceImpl();
+    private final UserService userService;
 
-    public ShowAllUsersMenu(MenuRoutes routeID, ConsoleOutputWriter outputWriter) {
+    public ShowAllUsersMenu(MenuRoutes routeID, ConsoleOutputWriter outputWriter, UserService userService) {
         super(routeID);
         this.outputWriter = outputWriter;
+        this.userService = userService;
     }
 
     @Override
@@ -26,7 +28,7 @@ public class ShowAllUsersMenu extends Menu {
 
     @Override
     public MenuRoutes execute() {
-        List<User> users = userService.getAllUsers();
+        List<UserResponseDto> users = userService.getAllUsers();
 
         if (users.isEmpty()) {
             outputWriter.print("База данных пуста.");

@@ -1,5 +1,6 @@
 package org.toehisa.userservice.presentation.menu.entities;
 
+import org.toehisa.userservice.data.dto.UserResponseDto;
 import org.toehisa.userservice.data.entities.User;
 import org.toehisa.userservice.presentation.input.ConsoleInputReader;
 import org.toehisa.userservice.presentation.menu.routes.MenuRoutes;
@@ -15,12 +16,13 @@ import static org.toehisa.userservice.presentation.menu.routes.MenuRoutes.MAIN;
 public class ShowUserByIdMenu extends Menu {
     private final ConsoleInputReader inputReader;
     private final ConsoleOutputWriter outputWriter;
-    private final UserService userService = new UserServiceImpl();
+    private final UserService userService;
 
-    public ShowUserByIdMenu(MenuRoutes routeID, ConsoleInputReader inputReader, ConsoleOutputWriter outputWriter) {
+    public ShowUserByIdMenu(MenuRoutes routeID, ConsoleInputReader inputReader, ConsoleOutputWriter outputWriter, UserService userService) {
         super(routeID);
         this.inputReader = inputReader;
         this.outputWriter = outputWriter;
+        this.userService = userService;
     }
 
     @Override
@@ -31,14 +33,14 @@ public class ShowUserByIdMenu extends Menu {
     @Override
     public MenuRoutes execute() {
         UUID id = inputReader.readUUID("Введите ID пользователя: ");
-        User user = userService.getUserById(id);
+        UserResponseDto user = userService.getUserById(id);
 
         showMessageOnUserExist(user);
 
         return MAIN;
     }
 
-    private void showMessageOnUserExist(User user) {
+    private void showMessageOnUserExist(UserResponseDto user) {
         if (Objects.nonNull(user)) {
             outputWriter.print("Пользователь найден:\n" + user);
         } else {
