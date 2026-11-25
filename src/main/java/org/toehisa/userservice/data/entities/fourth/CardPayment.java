@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 
 
-@Entity
+@Entity(name = "FourthCardPayment")
 public class CardPayment extends Payment {
 
     public CardPayment(){}

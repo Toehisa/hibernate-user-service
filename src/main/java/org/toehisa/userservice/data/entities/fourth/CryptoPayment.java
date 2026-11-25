@@ -3,7 +3,7 @@ package org.toehisa.userservice.data.entities.fourth;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 
-@Entity
+@Entity(name = "FourthCryptoPayment")
 public class CryptoPayment extends Payment {
 
     @Column(name = "wallet_address")
