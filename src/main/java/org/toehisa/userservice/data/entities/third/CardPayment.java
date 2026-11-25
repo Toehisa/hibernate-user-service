@@ -6,7 +6,7 @@ import jakarta.persistence.Entity;
 
 import java.util.UUID;
 
-@Entity
+@Entity(name = "ThirdCardPayment")
 public class CardPayment extends Payment {
 
     @Column(name = "card_number")

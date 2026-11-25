@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+    <appender name="TEST_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/test.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <logger name="org.toehisa.userservice" level="DEBUG" />
+    <logger name="org.hibernate.SQL" level="DEBUG" />
+    <logger name="org.hibernate.orm.jdbc.bind" level="TRACE" />
+
+    <logger name="org.testcontainers" level="INFO" />
+    <logger name="tc" level="INFO" />
+    <logger name="com.github.dockerjava" level="WARN" />
+
+    <root level="INFO">
+        <appender-ref ref="TEST_FILE" />
+    </root>
+</configuration>

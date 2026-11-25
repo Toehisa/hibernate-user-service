@@ -4,7 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
-@Entity
+@Entity(name = "ThirdCryptoPayment")
 public class CryptoPayment extends Payment {
 
     @Column(name = "wallet_address")
